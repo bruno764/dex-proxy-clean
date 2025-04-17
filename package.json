@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "name": "dex-proxy",
     "version": "1.0.0",
@@ -15,4 +16,23 @@
       "node": ">=18.0.0"
     }
   }
+=======
+{
+    "name": "dex-proxy",
+    "version": "1.0.0",
+    "type": "module",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "dependencies": {
+      "cors": "^2.8.5",
+      "express": "^4.18.2",
+      "node-fetch": "^3.3.2"
+    },
+    "engines": {
+      "node": ">=18.0.0"
+    }
+  }
+>>>>>>> 5621200 (deploy: proxy limpo para Dexscreener)
   
