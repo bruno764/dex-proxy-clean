@@ -1,13 +1,17 @@
 {
   "name": "dex-proxy",
   "version": "1.0.0",
-  "description": "Proxy for Dexscreener API",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.2"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
