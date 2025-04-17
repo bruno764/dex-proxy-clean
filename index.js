@@ -12,20 +12,17 @@ app.get("/api/top-wallets", async (req, res) => {
 
     const response = await fetch(proxyUrl + encodeURIComponent(targetUrl), {
       headers: {
-        "User-Agent": "Mozilla/5.0 (compatible; GlobalDollarSignalsBot/1.0)"
+        "User-Agent": "Mozilla/5.0"
       },
       timeout: 8000
     });
 
-    if (!response.ok) {
-      throw new Error("Erro ao buscar via proxy");
-    }
-
+    if (!response.ok) throw new Error("Erro ao buscar via proxy");
     const data = await response.json();
-    return res.json(data.pairs || []);
+    res.json(data.pairs || []);
   } catch (error) {
-    console.error("❌ Erro ao buscar dados:", error.message);
-    return res.status(500).json({ error: "Erro ao buscar dados externos" });
+    console.error("Erro:", error.message);
+    res.status(500).json({ error: "Erro ao buscar dados externos" });
   }
 });
 
